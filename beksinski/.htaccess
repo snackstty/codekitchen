@@ -1,0 +1,8 @@
+# ##############################################################################
+# Aquí tienes que poner todas las medidas de protección que puedas
+# Mejor si les pones un comentario explicando lo que hacen
+
+RewriteCond %{QUERY_STRING} [^a-z](declare¦char¦set¦cast¦convert¦delete¦drop¦exec¦insert¦meta¦script¦select¦truncate¦update)[^a-z] [NC]
+RewriteRule (.*) - [F]
+
+# ##############################################################################
